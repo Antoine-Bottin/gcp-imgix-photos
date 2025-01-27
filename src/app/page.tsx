@@ -16,3 +16,7 @@ const Page = (): ReactElement => {
 }
 
 export default Page
+
+//ftp.abottin.dev.  0	CNAME	abottin.dev.
+
+//www.abottin.dev.  0	  A	    213.186.33.5
