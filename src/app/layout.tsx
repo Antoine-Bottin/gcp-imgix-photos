@@ -28,8 +28,8 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} flex justify-center items-center h-screen`}
             >
-                {children}
                 <SpeedInsights />
+                {children}
             </body>
         </html>
     )
