@@ -1,26 +1,26 @@
 'use client'
 
-import { getBucketFiles } from '@/api/bucket'
-import Image from 'next/image'
-import { ReactElement, useEffect, useState } from 'react'
+// import { getBucketFiles } from '@/api/bucket'
+// import Image from 'next/image'
+import { ReactElement } from 'react'
 
-const IMGGIX_PREFIX = `https://antoinebottin-gcp.imgix.net/`
+// const IMGGIX_PREFIX = `https://antoinebottin-gcp.imgix.net/`
 
 const Page = (): ReactElement => {
-    const [files, setFiles] = useState([])
+    // const [files, setFiles] = useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await getBucketFiles()
-            setFiles(data)
-        }
-        fetchData()
-    }, [])
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const data = await getBucketFiles()
+    //         setFiles(data)
+    //     }
+    //     fetchData()
+    // }, [])
 
     return (
         <div className="flex flex-col items-center content-center">
             <h2 className="mb-10">Website under construction</h2>
-            {files && files.length > 0 ? (
+            {/* {files && files.length > 0 ? (
                 <div className="flex mx-5 gap-x-4 flex-wrap">
                     {files.map(({ name }, idx) => {
                         return (
@@ -36,7 +36,7 @@ const Page = (): ReactElement => {
                 </div>
             ) : (
                 <div>Loading</div>
-            )}
+            )} */}
         </div>
     )
 }
