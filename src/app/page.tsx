@@ -20,19 +20,23 @@ const Page = (): ReactElement => {
     return (
         <div className="flex flex-col items-center content-center">
             <h2 className="mb-10">Website under construction</h2>
-            <div className="flex mx-5">
-                {files.map(({ name }, idx) => {
-                    return (
-                        <Image
-                            key={idx}
-                            src={`${IMGGIX_PREFIX}${name}`}
-                            alt={name}
-                            width={300}
-                            height={300}
-                        />
-                    )
-                })}
-            </div>
+            {files && files.length > 0 ? (
+                <div className="flex mx-5">
+                    {files.map(({ name }, idx) => {
+                        return (
+                            <Image
+                                key={idx}
+                                src={`${IMGGIX_PREFIX}${name}`}
+                                alt={name}
+                                width={300}
+                                height={300}
+                            />
+                        )
+                    })}
+                </div>
+            ) : (
+                <div>Loading</div>
+            )}
         </div>
     )
 }
