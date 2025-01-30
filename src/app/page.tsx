@@ -11,8 +11,8 @@ const Page = (): ReactElement => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getBucketFiles() // ✅ Await the data
-            setFiles(data) // ✅ Store the data in state
+            const data = await getBucketFiles()
+            setFiles(data)
         }
         fetchData()
     }, [])
@@ -21,7 +21,7 @@ const Page = (): ReactElement => {
         <div className="flex flex-col items-center content-center">
             <h2 className="mb-10">Website under construction</h2>
             {files && files.length > 0 ? (
-                <div className="flex mx-5">
+                <div className="flex mx-5 gap-x-4 flex-wrap">
                     {files.map(({ name }, idx) => {
                         return (
                             <Image

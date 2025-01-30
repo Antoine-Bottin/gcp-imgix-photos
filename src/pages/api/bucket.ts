@@ -11,7 +11,7 @@ export default async function handler(
             {
                 headers: {
                     Authorization: `Bearer ${process.env.GOOGLE_AUTH}`,
-                    //gcloud auth print-access-token     => command google cloud cli to have new token   this one is available an hour
+                    //https://cloud.google.com/docs/authentication/rest?hl=fr#rest-request
                 },
             }
         )
