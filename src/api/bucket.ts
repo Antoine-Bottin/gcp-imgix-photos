@@ -3,7 +3,7 @@ export const getBucketFiles = async () => {
     try {
         const response = await fetch('/api/bucket')
         const files = await response.json()
-        return files.items
+        return files
     } catch (e) {
         console.log(e)
     }
